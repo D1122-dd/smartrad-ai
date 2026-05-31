@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260522233430-4-793",
+  "user_id": 1,
+  "mrn": "MRN-122545",
+  "accession_number": "ACC-20260522-868",
+  "patient_name": "Layla Al-Ghamdi",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 1,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Trauma",
+  "request_time": "2026-05-22T23:34:30.866824",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260522233430||ORM^O01|ACC-20260522-868|P|2.3|||\nPID|1||MRN-122545||Layla Al-Ghamdi||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260522233430-4-793|||||1^once||20260522233430|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260522233430-4-793||Pelvis^X-Ray|||20260522233430|||||||Trauma||||||||||P|"
+}

@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513150706-2-404",
+  "mrn": "MRN-723643",
+  "accession_number": "ACC-20260513-808",
+  "patient_name": "Omar Abdullah",
+  "patient_age_group": "Adult",
+  "exam_type": "Spine",
+  "body_part": "Spine",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 9,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Chronic back pain",
+  "request_time": "2026-05-13T15:07:06.803447",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513150706||ORM^O01|ACC-20260513-808|P|2.3|||\nPID|1||MRN-723643||Omar Abdullah||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513150706-2-404|||||1^once||20260513150706|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513150706-2-404||Spine^X-Ray|||20260513150706|||||||Chronic back pain||||||||||P|"
+}

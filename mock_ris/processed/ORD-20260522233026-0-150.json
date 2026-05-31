@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260522233026-0-150",
+  "user_id": 1,
+  "mrn": "MRN-734036",
+  "accession_number": "ACC-20260522-479",
+  "patient_name": "Hana Al-Otaibi",
+  "patient_age_group": "Adult",
+  "exam_type": "Abdomen",
+  "body_part": "Abdomen",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 5,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Bloating",
+  "request_time": "2026-05-22T23:30:26.393226",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260522233026||ORM^O01|ACC-20260522-479|P|2.3|||\nPID|1||MRN-734036||Hana Al-Otaibi||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260522233026-0-150|||||1^once||20260522233026|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260522233026-0-150||Abdomen^X-Ray|||20260522233026|||||||Bloating||||||||||P|"
+}

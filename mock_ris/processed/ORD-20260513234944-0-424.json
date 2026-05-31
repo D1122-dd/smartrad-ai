@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513234944-0-424",
+  "user_id": 1,
+  "mrn": "MRN-727383",
+  "accession_number": "ACC-20260513-416",
+  "patient_name": "Nora Hassan",
+  "patient_age_group": "Elderly",
+  "exam_type": "Knee",
+  "body_part": "Lower_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 1,
+  "physician": "Dr. Al-Dossari",
+  "history": "Osteoarthritis follow-up",
+  "request_time": "2026-05-13T23:49:44.571326",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513234944||ORM^O01|ACC-20260513-416|P|2.3|||\nPID|1||MRN-727383||Nora Hassan||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513234944-0-424|||||1^once||20260513234944|Dr. Al-Dossari||||||\nOBR|1|ORD-20260513234944-0-424||Knee^X-Ray|||20260513234944|||||||Osteoarthritis follow-up||||||||||P|"
+}

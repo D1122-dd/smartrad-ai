@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513144231-112",
+  "mrn": "MRN-277109",
+  "accession_number": "ACC-20260513-416",
+  "patient_name": "Layla Al-Qahtani",
+  "patient_age_group": "Adult",
+  "exam_type": "Spine",
+  "body_part": "Spine",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 2,
+  "physician": "Dr. Al-Dossari",
+  "history": "Recent fall",
+  "request_time": "2026-05-13T14:42:31.473965",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513144231||ORM^O01|ACC-20260513-416|P|2.3|||\nPID|1||MRN-277109||Layla Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513144231-112|||||1^once||20260513144231|Dr. Al-Dossari||||||\nOBR|1|ORD-20260513144231-112||Spine^X-Ray|||20260513144231|||||||Recent fall||||||||||P|"
+}

@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260522233026-4-826",
+  "user_id": 1,
+  "mrn": "MRN-404292",
+  "accession_number": "ACC-20260522-416",
+  "patient_name": "Ahmed Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 4,
+  "physician": "Dr. Al-Shehri",
+  "history": "Suspected fracture",
+  "request_time": "2026-05-22T23:30:26.394890",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260522233026||ORM^O01|ACC-20260522-416|P|2.3|||\nPID|1||MRN-404292||Ahmed Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260522233026-4-826|||||1^once||20260522233026|Dr. Al-Shehri||||||\nOBR|1|ORD-20260522233026-4-826||Hand^X-Ray|||20260522233026|||||||Suspected fracture||||||||||P|"
+}

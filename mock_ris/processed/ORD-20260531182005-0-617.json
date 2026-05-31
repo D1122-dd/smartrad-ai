@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260531182005-0-617",
+  "user_id": 1,
+  "mrn": "MRN-823733",
+  "accession_number": "ACC-20260531-860",
+  "patient_name": "Majed Abdullah",
+  "patient_age_group": "Adult",
+  "exam_type": "Chest",
+  "body_part": "Thorax",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 1,
+  "physician": "Dr. Al-Dossari",
+  "history": "Cough and fever",
+  "request_time": "2026-05-31T18:20:05.197053",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260531182005||ORM^O01|ACC-20260531-860|P|2.3|||\nPID|1||MRN-823733||Majed Abdullah||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260531182005-0-617|||||1^once||20260531182005|Dr. Al-Dossari||||||\nOBR|1|ORD-20260531182005-0-617||Chest^X-Ray|||20260531182005|||||||Cough and fever||||||||||P|"
+}

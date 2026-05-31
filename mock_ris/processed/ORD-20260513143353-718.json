@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513143353-718",
+  "mrn": "MRN-722365",
+  "accession_number": "ACC-20260513-748",
+  "patient_name": "Maha Al-Otaibi",
+  "patient_age_group": "Elderly",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 5,
+  "physician": "Dr. Al-Shehri",
+  "history": "Suspected fracture",
+  "request_time": "2026-05-13T14:33:53.547234",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513143353||ORM^O01|ACC-20260513-748|P|2.3|||\nPID|1||MRN-722365||Maha Al-Otaibi||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513143353-718|||||1^once||20260513143353|Dr. Al-Shehri||||||\nOBR|1|ORD-20260513143353-718||Hand^X-Ray|||20260513143353|||||||Suspected fracture||||||||||P|"
+}

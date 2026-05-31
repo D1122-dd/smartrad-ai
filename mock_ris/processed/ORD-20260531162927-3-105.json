@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260531162927-3-105",
+  "user_id": 1,
+  "mrn": "MRN-845865",
+  "accession_number": "ACC-20260531-628",
+  "patient_name": "Mohammed Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 6,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Fall in elderly",
+  "request_time": "2026-05-31T16:29:27.966690",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260531162927||ORM^O01|ACC-20260531-628|P|2.3|||\nPID|1||MRN-845865||Mohammed Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260531162927-3-105|||||1^once||20260531162927|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260531162927-3-105||Pelvis^X-Ray|||20260531162927|||||||Fall in elderly||||||||||P|"
+}

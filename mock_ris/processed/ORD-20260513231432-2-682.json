@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513231432-2-682",
+  "mrn": "MRN-450259",
+  "accession_number": "ACC-20260513-176",
+  "patient_name": "Maha Al-Qahtani",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 1,
+  "urgency_score": 9,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Dislocation",
+  "request_time": "2026-05-13T23:14:32.031540",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513231432||ORM^O01|ACC-20260513-176|P|2.3|||\nPID|1||MRN-450259||Maha Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513231432-2-682|||||1^once||20260513231432|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513231432-2-682||Shoulder^X-Ray|||20260513231432|||||||Dislocation||||||||||P|",
+  "user_id": 1
+}

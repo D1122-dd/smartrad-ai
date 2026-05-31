@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513133620-625",
+  "mrn": "MRN-976637",
+  "accession_number": "ACC-20260513-772",
+  "patient_name": "Hana Ibrahim",
+  "patient_age_group": "Child",
+  "exam_type": "Spine",
+  "body_part": "Spine",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 2,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Recent fall",
+  "request_time": "2026-05-13T13:36:20.359761",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513133620||ORM^O01|ACC-20260513-772|P|2.3|||\nPID|1||MRN-976637||Hana Ibrahim||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513133620-625|||||1^once||20260513133620|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513133620-625||Spine^X-Ray|||20260513133620|||||||Recent fall||||||||||P|"
+}

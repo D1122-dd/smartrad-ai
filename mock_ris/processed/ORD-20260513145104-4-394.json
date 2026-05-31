@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513145104-4-394",
+  "mrn": "MRN-331072",
+  "accession_number": "ACC-20260513-125",
+  "patient_name": "Ali Al-Ghamdi",
+  "patient_age_group": "Adult",
+  "exam_type": "Abdomen",
+  "body_part": "Abdomen",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 1,
+  "physician": "Dr. Al-Dossari",
+  "history": "Suspected appendicitis",
+  "request_time": "2026-05-13T14:51:04.285126",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513145104||ORM^O01|ACC-20260513-125|P|2.3|||\nPID|1||MRN-331072||Ali Al-Ghamdi||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513145104-4-394|||||1^once||20260513145104|Dr. Al-Dossari||||||\nOBR|1|ORD-20260513145104-4-394||Abdomen^X-Ray|||20260513145104|||||||Suspected appendicitis||||||||||P|"
+}

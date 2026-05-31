@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513145104-3-149",
+  "mrn": "MRN-592868",
+  "accession_number": "ACC-20260513-695",
+  "patient_name": "Sara Al-Qahtani",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 6,
+  "physician": "Dr. Al-Subaie",
+  "history": "Dislocation",
+  "request_time": "2026-05-13T14:51:04.281757",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513145104||ORM^O01|ACC-20260513-695|P|2.3|||\nPID|1||MRN-592868||Sara Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513145104-3-149|||||1^once||20260513145104|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513145104-3-149||Shoulder^X-Ray|||20260513145104|||||||Dislocation||||||||||P|"
+}

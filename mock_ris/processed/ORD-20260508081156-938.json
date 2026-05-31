@@ -1,0 +1,12 @@
+{
+  "order_id": "ORD-20260508081156-938",
+  "patient_name": "Layla Ibrahim",
+  "patient_age_group": "Adult",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 3,
+  "request_time": "2026-05-08T08:11:56.815017",
+  "source": "Mock-RIS-HL7"
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SmartRAD AI</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/Logo.png') }}">
+    <meta name="description" content="SmartRAD AI live radiology workflow dashboard — real-time room status and patient queue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    
+    <!-- Translation Engine (i18n) -->
+    <script src="{{ url_for('static', filename='js/translation.js') }}"></script>
+</head>
+<body class="dash-body">
+
+<!-- ── Toast Container ───────────────────────────────────── -->
+<div id="toast-container"></div>
+
+<div class="dash-layout">
+
+    <!-- ── Sidebar ──────────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="{{ url_for('static', filename='image/Logo.png') }}" class="sidebar-logo-img" alt="Logo">
+            <div>
+                <div class="sidebar-brand" data-i18n="common.brand_name">SmartRAD</div>
+                <div class="sidebar-sub" data-i18n="common.brand_sub">AI Workflow</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section-label" data-i18n="common.main_menu">MAIN</div>
+            <a href="/dashboard" class="nav-link active">
+                <i class="fas fa-th-large"></i> <span data-i18n="common.dashboard">Dashboard</span>
+            </a>
+            <a href="/queue" class="nav-link">
+                <i class="fas fa-list-ol"></i> <span data-i18n="common.case_queue">Case Queue</span>
+            </a>
+            <a href="/performance" class="nav-link">
+                <i class="fas fa-chart-line"></i> <span data-i18n="common.performance">Performance</span>
+            </a>
+
+            <div class="nav-section-label" data-i18n="common.account_menu">ACCOUNT</div>
+            <a href="/settings" class="nav-link">
+                <i class="fas fa-cog"></i> <span data-i18n="common.settings">Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-chip">
+                <a href="/profile" class="user-chip-link" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit; flex-grow: 1; transition: opacity 0.2s;">
+                    <div class="mini-avatar" id="sidebarAvatar">
+                        <img id="sidebarImg" src="" alt="" style="width:100%; height:100%; border-radius:50%; object-fit:cover; display:none;">
+                        <span id="sidebarInitials">?</span>
+                    </div>
+                    <div class="user-chip-info">
+                        <div class="user-chip-name" id="sidebarName">Loading…</div>
+                    </div>
+                </a>
+                <button class="logout-icon-btn" onclick="Auth.logout()" title="Sign out">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ── Main ─────────────────────────────────────────────── -->
+    <main class="dash-main">
+
+        <!-- Top bar -->
+        <header class="dash-topbar">
+            <div>
+                <h1 class="dash-title" data-i18n="dashboard.title">Dashboard</h1>
+                <p class="dash-subtitle" data-i18n="dashboard.subtitle">Real-time radiology workflow — auto-refreshing every 3s</p>
+            </div>
+            <div class="topbar-actions" style="display: flex; align-items: center; gap: 1.25rem;">
+                <!-- Language Toggle Button -->
+                <button class="topbar-icon-btn" id="langToggle" title="Toggle Language" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <div class="notif-wrap">
+                    <button class="topbar-icon-btn" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notif-dot" id="notif-dot" style="display:none"></span>
+                    </button>
+                    <span class="notif-count" id="notif-count"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ── Stat Tiles ──────────────────────────────────── -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon stat-icon--blue"><i class="fas fa-users"></i></div>
+                <div class="stat-body">
+                    <div class="stat-label" data-i18n="dashboard.waiting_cases">Waiting Cases</div>
+                    <div style="display:flex;align-items:baseline;gap:6px;">
+                        <div class="stat-value" id="stat-waiting">–</div>
+                        <span id="stat-critical" style="display:inline-flex; background:#fee2e2; color:#b91c1c; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:9999px;">
+                            <i class="fas fa-triangle-exclamation" style="font-size:10px;"></i>
+                            <span id="stat-critical-count">0</span>
+                        </span>
+                    </div>
+                    <div class="stat-sub" data-i18n="dashboard.waiting_sub">Patients in queue</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon--amber"><i class="fas fa-clock"></i></div>
+                <div class="stat-body">
+                    <div class="stat-label" data-i18n="dashboard.avg_wait">Avg Wait Time</div>
+                    <div class="stat-value" id="stat-avg-wait">–</div>
+                    <div class="stat-sub" data-i18n="dashboard.avg_wait_sub">Across DX / CR</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon--green"><i class="fas fa-heartbeat"></i></div>
+                <div class="stat-body">
+                    <div class="stat-label" data-i18n="dashboard.active_devices">Active Devices</div>
+                    <div class="stat-value" id="stat-active">–</div>
+                    <div class="stat-sub" data-i18n="dashboard.active_sub">Currently scanning</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon--purple"><i class="fas fa-tachometer-alt"></i></div>
+                <div class="stat-body">
+                    <div class="stat-label" data-i18n="dashboard.system_load">System Load</div>
+                    <div class="stat-value" id="stat-load">–</div>
+                    <div class="stat-sub" data-i18n="dashboard.system_load_sub">Capacity utilization</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Room Cards ──────────────────────────────────── -->
+        <section class="section-block">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" data-i18n="dashboard.device_status">Device Status &amp; Availability</h2>
+                    <p class="section-sub" data-i18n="dashboard.device_sub">Real-time availability of imaging scanners.</p>
+                </div>
+                <div class="live-badge"><span class="live-dot"></span> <span data-i18n="dashboard.live_badge">LIVE</span></div>
+            </div>
+            <div class="rooms-grid" id="rooms-grid">
+                <div class="room-skeleton"></div>
+                <div class="room-skeleton"></div>
+                <div class="room-skeleton"></div>
+                <div class="room-skeleton"></div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- ── New Patient Modal ────────────────────────────────────── -->
+<div id="patientModal" class="modal-overlay">
+    <div class="modal-card">
+        <div class="modal-header">
+            <h2 class="modal-title" data-i18n="modal_patient.title">Register New Patient</h2>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <form id="patientForm" onsubmit="submitPatient(event)">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label data-i18n="modal_patient.name">Full Name</label>
+                    <input type="text" name="name" data-i18n-placeholder="modal_patient.name_placeholder" placeholder="e.g. Ahmed Ali" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="modal_patient.exam_type">Exam Type</label>
+                    <select name="exam_type" required>
+                        <option value="Chest">Chest</option>
+                        <option value="Knee">Knee</option>
+                        <option value="Spine">Spine</option>
+                        <option value="Abdomen">Abdomen</option>
+                        <option value="Hand">Hand</option>
+                        <option value="Pelvis">Pelvis</option>
+                        <option value="Shoulder">Shoulder</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="modal_patient.modality">Modality</label>
+                    <select name="modality_type" required>
+                        <option value="DX">DX (Digital)</option>
+                        <option value="CR">CR (Computed)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="modal_patient.age_group">Age Group</label>
+                    <select name="patient_age_group" required>
+                        <option value="Adult" data-i18n="modal_patient.adult">Adult</option>
+                        <option value="Child" data-i18n="modal_patient.child">Child</option>
+                        <option value="Elderly" data-i18n="modal_patient.elderly">Elderly</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="modal_patient.body_part">Body Part</label>
+                    <select name="body_part" required>
+                        <option value="Thorax">Thorax</option>
+                        <option value="Lower_Limb">Lower Limb</option>
+                        <option value="Upper_Limb">Upper Limb</option>
+                        <option value="Spine">Spine</option>
+                        <option value="Abdomen">Abdomen</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="modal_patient.urgency">Urgency Level (1-10)</label>
+                    <input type="range" name="urgency_score" min="1" max="10" value="5" 
+                           oninput="this.nextElementSibling.value = this.value">
+                    <output>5</output>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="topbar-btn" style="background:#64748b;" onclick="closeModal()" data-i18n="common.cancel">Cancel</button>
+                <button type="submit" class="topbar-btn" data-i18n="modal_patient.btn_queue">Register & Queue</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+<script>
+    function openModal() { document.getElementById('patientModal').classList.add('active'); }
+    function closeModal() { document.getElementById('patientModal').classList.remove('active'); }
+
+    async function submitPatient(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        
+        try {
+            const res = await fetch('/api/ris/manual', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const data = await res.json();
+            if (data.success) {
+                closeModal();
+                form.reset();
+                if (typeof Dashboard !== 'undefined') Dashboard.fetchRooms();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    (async () => {
+        const ok = await Auth.guard();
+        if (!ok) return;
+        const name = Auth.getUserName();
+        const image = Auth.getProfileImage();
+    
+        document.getElementById('sidebarName').textContent = name;
+        const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+        document.getElementById('sidebarInitials').textContent = initials;
+    
+        if (image) {
+            const img = document.getElementById('sidebarImg');
+            img.src = image;
+            img.style.display = 'block';
+            document.getElementById('sidebarInitials').style.display = 'none';
+        }
+    })();
+</script>
+</body>
+</html>

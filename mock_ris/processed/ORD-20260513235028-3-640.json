@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513235028-3-640",
+  "user_id": 1,
+  "mrn": "MRN-522672",
+  "accession_number": "ACC-20260513-399",
+  "patient_name": "Khalid Al-Zahrani",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 3,
+  "physician": "Dr. Al-Subaie",
+  "history": "Rotator cuff injury",
+  "request_time": "2026-05-13T23:50:28.207837",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513235028||ORM^O01|ACC-20260513-399|P|2.3|||\nPID|1||MRN-522672||Khalid Al-Zahrani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513235028-3-640|||||1^once||20260513235028|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513235028-3-640||Shoulder^X-Ray|||20260513235028|||||||Rotator cuff injury||||||||||P|"
+}

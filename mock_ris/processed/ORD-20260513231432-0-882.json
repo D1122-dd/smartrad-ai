@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513231432-0-882",
+  "mrn": "MRN-620099",
+  "accession_number": "ACC-20260513-479",
+  "patient_name": "Omar Hassan",
+  "patient_age_group": "Adult",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 6,
+  "physician": "Dr. Al-Shehri",
+  "history": "Suspected fracture",
+  "request_time": "2026-05-13T23:14:32.020372",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513231432||ORM^O01|ACC-20260513-479|P|2.3|||\nPID|1||MRN-620099||Omar Hassan||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513231432-0-882|||||1^once||20260513231432|Dr. Al-Shehri||||||\nOBR|1|ORD-20260513231432-0-882||Hand^X-Ray|||20260513231432|||||||Suspected fracture||||||||||P|",
+  "user_id": 1
+}

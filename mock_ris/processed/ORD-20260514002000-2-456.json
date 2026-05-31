@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260514002000-2-456",
+  "user_id": 1,
+  "mrn": "MRN-774298",
+  "accession_number": "ACC-20260514-151",
+  "patient_name": "Omar Al-Qahtani",
+  "patient_age_group": "Adult",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 1,
+  "urgency_score": 7,
+  "physician": "Dr. Al-Subaie",
+  "history": "Arthritis",
+  "request_time": "2026-05-14T00:20:00.088502",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260514002000||ORM^O01|ACC-20260514-151|P|2.3|||\nPID|1||MRN-774298||Omar Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260514002000-2-456|||||1^once||20260514002000|Dr. Al-Subaie||||||\nOBR|1|ORD-20260514002000-2-456||Hand^X-Ray|||20260514002000|||||||Arthritis||||||||||P|"
+}

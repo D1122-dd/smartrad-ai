@@ -1,0 +1,116 @@
+/* =============================================================
+   performance.css  —  SmartRAD AI Performance / Analytics Page
+   ============================================================= */
+
+/* ── Charts Layout ───────────────────────────────────────────── */
+.charts-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.25rem;
+}
+
+.chart-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid #e2e8f0;
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.chart-card--wide { /* default two-thirds width, handled by grid */ }
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.chart-title { font-size: 1rem; font-weight: 700; color: #0f172a; }
+.chart-sub   { font-size: 0.78rem; color: #94a3b8; margin-top: 0.2rem; }
+
+.chart-wrap {
+    position: relative;
+    height: 240px;
+}
+
+.chart-wrap--donut {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Accuracy Card ───────────────────────────────────────────── */
+.perf-accuracy-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.accuracy-ring-wrap {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.25rem;
+    flex-shrink: 0;
+}
+
+.accuracy-center-label {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.acl-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.acl-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
+.accuracy-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.acc-stat     { text-align: center; }
+.acc-stat-val { font-size: 1.25rem; font-weight: 700; color: #0f172a; }
+.acc-stat-label { font-size: 0.72rem; color: #94a3b8; margin-top: 0.2rem; }
+
+/* ── History Table error badge ───────────────────────────────── */
+.error-badge {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 0.375rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.err-ok    { background: #dcfce7; color: #15803d; }
+.err-over  { background: #fee2e2; color: #b91c1c; }
+.err-under { background: #fef3c7; color: #92400e; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .charts-row { grid-template-columns: 1fr; }
+}
+
+@media print {
+    .sidebar, .dash-topbar, .topbar-actions { display: none !important; }
+    .dash-layout { display: block !important; }
+    .dash-main { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    .chart-card { break-inside: avoid; border: 1px solid #eee !important; box-shadow: none !important; }
+}

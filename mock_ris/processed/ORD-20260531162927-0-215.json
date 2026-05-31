@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260531162927-0-215",
+  "user_id": 1,
+  "mrn": "MRN-409757",
+  "accession_number": "ACC-20260531-809",
+  "patient_name": "Fatima Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Knee",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 2,
+  "physician": "Dr. Al-Dossari",
+  "history": "ACL tear suspicion",
+  "request_time": "2026-05-31T16:29:27.963886",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260531162927||ORM^O01|ACC-20260531-809|P|2.3|||\nPID|1||MRN-409757||Fatima Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260531162927-0-215|||||1^once||20260531162927|Dr. Al-Dossari||||||\nOBR|1|ORD-20260531162927-0-215||Knee^X-Ray|||20260531162927|||||||ACL tear suspicion||||||||||P|"
+}

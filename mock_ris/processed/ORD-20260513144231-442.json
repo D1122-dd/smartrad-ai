@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513144231-442",
+  "mrn": "MRN-718147",
+  "accession_number": "ACC-20260513-939",
+  "patient_name": "Hana Al-Qahtani",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 4,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Hip pain",
+  "request_time": "2026-05-13T14:42:31.470837",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513144231||ORM^O01|ACC-20260513-939|P|2.3|||\nPID|1||MRN-718147||Hana Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513144231-442|||||1^once||20260513144231|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513144231-442||Pelvis^X-Ray|||20260513144231|||||||Hip pain||||||||||P|"
+}

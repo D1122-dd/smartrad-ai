@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513152228-1-833",
+  "mrn": "MRN-672144",
+  "accession_number": "ACC-20260513-443",
+  "patient_name": "Ahmed Hassan",
+  "patient_age_group": "Adult",
+  "exam_type": "Knee",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 6,
+  "physician": "Dr. Al-Subaie",
+  "history": "Osteoarthritis follow-up",
+  "request_time": "2026-05-13T15:22:28.646747",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513152228||ORM^O01|ACC-20260513-443|P|2.3|||\nPID|1||MRN-672144||Ahmed Hassan||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513152228-1-833|||||1^once||20260513152228|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513152228-1-833||Knee^X-Ray|||20260513152228|||||||Osteoarthritis follow-up||||||||||P|"
+}

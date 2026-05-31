@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SmartRAD AI</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/Logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Translation Engine (i18n) -->
+    <script src="{{ url_for('static', filename='js/translation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+    <style>
+    .lang-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background-color: var(--card-bg, #ffffff);
+        color: var(--text-color, #333333);
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .lang-toggle-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        background-color: var(--primary-hover-light, #f8f9fa);
+    }
+    .rtl .auth-left {
+        order: 2;
+    }
+    .rtl .auth-right {
+        order: 1;
+    }
+    .rtl .form-group input {
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+    <!-- Floating Language Switcher -->
+    <div class="lang-switch-container" style="position: absolute; top: 20px; right: 20px; z-index: 1000;">
+        <button onclick="toggleLanguage()" class="lang-toggle-btn" id="langToggle">
+            <i class="fas fa-globe" style="margin-inline-end: 6px;"></i>
+            <span id="langText">English</span>
+        </button>
+    </div>
+
+    <div class="auth-wrapper">
+        <!-- Left Side: Welcome Panel -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <h1 data-i18n="register.title">Join SmartRAD AI</h1>
+                <p data-i18n="register.subtitle">Register now to experience AI-powered radiology workflow management</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Registration Form -->
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <div class="auth-logo-section">
+                    <img src="{{ url_for('static', filename='image/Logo.png') }}" class="auth-logo-img" alt="SmartRAD Logo">
+                    <div class="auth-brand-name"><span data-i18n="common.brand_name">SmartRAD</span> <span>AI</span></div>
+                </div>
+
+                <div id="alert" class="alert"></div>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="register.name_label">Full Name</label>
+                        <input type="text" id="name" name="name" data-i18n-placeholder="register.name_placeholder" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="register.email_label">Email address</label>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="login.email_placeholder" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_number" data-i18n="register.phone_label">Phone Number (Optional)</label>
+                        <input type="text" id="phone_number" name="phone_number" data-i18n-placeholder="register.phone_placeholder" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" data-i18n="register.password_label">Password</label>
+                        <input type="password" id="password" name="password" data-i18n-placeholder="register.password_placeholder" placeholder="Enter your password" required minlength="6">
+                    </div>
+                    
+                    <button type="submit" class="auth-btn" id="submitBtn">
+                        <span id="btnSpinner" class="spinner"></span>
+                        <span id="btnText" data-i18n="register.btn_text">Create Account</span>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>
+                        <span data-i18n="register.have_account">Already have an account?</span> 
+                        <a href="{{ url_for('login_page') }}" data-i18n="common.sign_in">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // If already logged in, go to dashboard
+        Auth.guardPublic();
+        
+        // Update Floating language toggle text based on current language
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const langText = document.getElementById('langText');
+                if (langText) {
+                    langText.textContent = getLanguage() === 'ar' ? 'English' : 'العربية';
+                }
+            }, 100);
+        });
+
+        const registerForm = document.getElementById('registerForm');
+        const alertBox = document.getElementById('alert');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const btnText = document.getElementById('btnText');
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Reset state
+            alertBox.style.display = 'none';
+            btnSpinner.style.display = 'inline-block';
+            btnText.textContent = t('register.creating_account');
+            submitBtn.disabled = true;
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone_number = document.getElementById('phone_number').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, phone_number, password })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    Auth.save(result.token, result.user_name, result.user_id, result.profile_image);
+
+                    alertBox.className = 'alert alert-success';
+                    alertBox.textContent = t('common.success');
+                    alertBox.style.display = 'block';
+
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 1500);
+                } else {
+                    alertBox.className = 'alert alert-error';
+                    alertBox.textContent = result.message || t('common.error');
+                    alertBox.style.display = 'block';
+                    
+                    btnSpinner.style.display = 'none';
+                    btnText.textContent = t('register.btn_text');
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                alertBox.className = 'alert alert-error';
+                alertBox.textContent = t('common.error');
+                alertBox.style.display = 'block';
+                
+                btnSpinner.style.display = 'none';
+                btnText.textContent = t('register.btn_text');
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

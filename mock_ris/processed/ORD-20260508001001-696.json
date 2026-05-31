@@ -1,0 +1,12 @@
+{
+  "order_id": "ORD-20260508001001-696",
+  "patient_name": "Mohammed Hassan",
+  "patient_age_group": "Child",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 7,
+  "request_time": "2026-05-08T00:10:01.962679",
+  "source": "Mock-RIS-HL7"
+}

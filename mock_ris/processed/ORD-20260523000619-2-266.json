@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260523000619-2-266",
+  "user_id": 1,
+  "mrn": "MRN-972204",
+  "accession_number": "ACC-20260523-502",
+  "patient_name": "Sara Al-Otaibi",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "CR",
+  "is_urgent": 1,
+  "urgency_score": 9,
+  "physician": "Dr. Al-Subaie",
+  "history": "Fall in elderly",
+  "request_time": "2026-05-23T00:06:19.065937",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260523000619||ORM^O01|ACC-20260523-502|P|2.3|||\nPID|1||MRN-972204||Sara Al-Otaibi||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260523000619-2-266|||||1^once||20260523000619|Dr. Al-Subaie||||||\nOBR|1|ORD-20260523000619-2-266||Pelvis^X-Ray|||20260523000619|||||||Fall in elderly||||||||||P|"
+}

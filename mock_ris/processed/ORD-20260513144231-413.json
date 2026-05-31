@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513144231-413",
+  "mrn": "MRN-153134",
+  "accession_number": "ACC-20260513-581",
+  "patient_name": "Omar Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 2,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Trauma",
+  "request_time": "2026-05-13T14:42:31.467212",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513144231||ORM^O01|ACC-20260513-581|P|2.3|||\nPID|1||MRN-153134||Omar Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513144231-413|||||1^once||20260513144231|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513144231-413||Pelvis^X-Ray|||20260513144231|||||||Trauma||||||||||P|"
+}

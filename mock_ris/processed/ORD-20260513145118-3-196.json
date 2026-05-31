@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513145118-3-196",
+  "mrn": "MRN-633775",
+  "accession_number": "ACC-20260513-131",
+  "patient_name": "Ali Saleh",
+  "patient_age_group": "Adult",
+  "exam_type": "Hand",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 3,
+  "physician": "Dr. Al-Subaie",
+  "history": "Crush injury",
+  "request_time": "2026-05-13T14:51:18.175335",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513145118||ORM^O01|ACC-20260513-131|P|2.3|||\nPID|1||MRN-633775||Ali Saleh||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513145118-3-196|||||1^once||20260513145118|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513145118-3-196||Hand^X-Ray|||20260513145118|||||||Crush injury||||||||||P|"
+}

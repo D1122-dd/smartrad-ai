@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513145104-1-685",
+  "mrn": "MRN-180453",
+  "accession_number": "ACC-20260513-762",
+  "patient_name": "Maha Al-Zahrani",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 3,
+  "physician": "Dr. Al-Subaie",
+  "history": "Frozen shoulder",
+  "request_time": "2026-05-13T14:51:04.272371",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513145104||ORM^O01|ACC-20260513-762|P|2.3|||\nPID|1||MRN-180453||Maha Al-Zahrani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513145104-1-685|||||1^once||20260513145104|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513145104-1-685||Shoulder^X-Ray|||20260513145104|||||||Frozen shoulder||||||||||P|"
+}

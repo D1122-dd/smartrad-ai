@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260522232907-2-972",
+  "user_id": 1,
+  "mrn": "MRN-560948",
+  "accession_number": "ACC-20260522-572",
+  "patient_name": "Khalid Ibrahim",
+  "patient_age_group": "Adult",
+  "exam_type": "Pelvis",
+  "body_part": "Lower_Limb",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 10,
+  "physician": "Dr. Al-Subaie",
+  "history": "Fall in elderly",
+  "request_time": "2026-05-22T23:29:07.637457",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260522232907||ORM^O01|ACC-20260522-572|P|2.3|||\nPID|1||MRN-560948||Khalid Ibrahim||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260522232907-2-972|||||1^once||20260522232907|Dr. Al-Subaie||||||\nOBR|1|ORD-20260522232907-2-972||Pelvis^X-Ray|||20260522232907|||||||Fall in elderly||||||||||P|"
+}

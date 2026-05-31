@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513235028-1-879",
+  "user_id": 1,
+  "mrn": "MRN-113430",
+  "accession_number": "ACC-20260513-455",
+  "patient_name": "Hana Saleh",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 4,
+  "physician": "Dr. Al-Shehri",
+  "history": "Frozen shoulder",
+  "request_time": "2026-05-13T23:50:28.182024",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513235028||ORM^O01|ACC-20260513-455|P|2.3|||\nPID|1||MRN-113430||Hana Saleh||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513235028-1-879|||||1^once||20260513235028|Dr. Al-Shehri||||||\nOBR|1|ORD-20260513235028-1-879||Shoulder^X-Ray|||20260513235028|||||||Frozen shoulder||||||||||P|"
+}

@@ -1,0 +1,12 @@
+{
+  "order_id": "ORD-20260508001004-146",
+  "patient_name": "Layla Al-Zahrani",
+  "patient_age_group": "Adult",
+  "exam_type": "Chest",
+  "body_part": "Thorax",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 9,
+  "request_time": "2026-05-08T00:10:04.787384",
+  "source": "Mock-RIS-HL7"
+}

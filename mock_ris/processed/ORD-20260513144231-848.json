@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513144231-848",
+  "mrn": "MRN-966198",
+  "accession_number": "ACC-20260513-816",
+  "patient_name": "Mohammed Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 4,
+  "physician": "Dr. Al-Subaie",
+  "history": "Rotator cuff injury",
+  "request_time": "2026-05-13T14:42:31.462700",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513144231||ORM^O01|ACC-20260513-816|P|2.3|||\nPID|1||MRN-966198||Mohammed Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513144231-848|||||1^once||20260513144231|Dr. Al-Subaie||||||\nOBR|1|ORD-20260513144231-848||Shoulder^X-Ray|||20260513144231|||||||Rotator cuff injury||||||||||P|"
+}

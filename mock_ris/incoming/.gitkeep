@@ -1,0 +1,2 @@
+# JSON order files dropped here are processed by the RIS watcher and moved to ../processed/
+# This folder is intentionally kept empty in Git.

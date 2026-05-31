@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260513231432-1-484",
+  "mrn": "MRN-508955",
+  "accession_number": "ACC-20260513-611",
+  "patient_name": "Nora Al-Qahtani",
+  "patient_age_group": "Child",
+  "exam_type": "Shoulder",
+  "body_part": "Upper_Limb",
+  "modality_type": "CR",
+  "is_urgent": 0,
+  "urgency_score": 4,
+  "physician": "Dr. Al-Mutairi",
+  "history": "Frozen shoulder",
+  "request_time": "2026-05-13T23:14:32.026050",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513231432||ORM^O01|ACC-20260513-611|P|2.3|||\nPID|1||MRN-508955||Nora Al-Qahtani||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513231432-1-484|||||1^once||20260513231432|Dr. Al-Mutairi||||||\nOBR|1|ORD-20260513231432-1-484||Shoulder^X-Ray|||20260513231432|||||||Frozen shoulder||||||||||P|",
+  "user_id": 1
+}

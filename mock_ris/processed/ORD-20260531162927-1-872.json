@@ -1,0 +1,18 @@
+{
+  "order_id": "ORD-20260531162927-1-872",
+  "user_id": 1,
+  "mrn": "MRN-756966",
+  "accession_number": "ACC-20260531-524",
+  "patient_name": "Sara Ibrahim",
+  "patient_age_group": "Adult",
+  "exam_type": "Chest",
+  "body_part": "Thorax",
+  "modality_type": "DX",
+  "is_urgent": 0,
+  "urgency_score": 5,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Shortness of breath",
+  "request_time": "2026-05-31T16:29:27.964670",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260531162927||ORM^O01|ACC-20260531-524|P|2.3|||\nPID|1||MRN-756966||Sara Ibrahim||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260531162927-1-872|||||1^once||20260531162927|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260531162927-1-872||Chest^X-Ray|||20260531162927|||||||Shortness of breath||||||||||P|"
+}

@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513145104-2-823",
+  "mrn": "MRN-619072",
+  "accession_number": "ACC-20260513-633",
+  "patient_name": "Maha Mansour",
+  "patient_age_group": "Adult",
+  "exam_type": "Spine",
+  "body_part": "Spine",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 9,
+  "physician": "Dr. Al-Mutairi",
+  "history": "Chronic back pain",
+  "request_time": "2026-05-13T14:51:04.277137",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513145104||ORM^O01|ACC-20260513-633|P|2.3|||\nPID|1||MRN-619072||Maha Mansour||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513145104-2-823|||||1^once||20260513145104|Dr. Al-Mutairi||||||\nOBR|1|ORD-20260513145104-2-823||Spine^X-Ray|||20260513145104|||||||Chronic back pain||||||||||P|"
+}

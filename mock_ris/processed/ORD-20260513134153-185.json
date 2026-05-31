@@ -1,0 +1,17 @@
+{
+  "order_id": "ORD-20260513134153-185",
+  "mrn": "MRN-120866",
+  "accession_number": "ACC-20260513-504",
+  "patient_name": "Yusuf Al-Rashid",
+  "patient_age_group": "Child",
+  "exam_type": "Abdomen",
+  "body_part": "Abdomen",
+  "modality_type": "DX",
+  "is_urgent": 1,
+  "urgency_score": 10,
+  "physician": "Dr. Al-Qahtani",
+  "history": "Follow-up on cyst",
+  "request_time": "2026-05-13T13:41:53.936867",
+  "source": "Mock-RIS-HL7",
+  "hl7_raw": "MSH|^~\\&|RIS-SIM|HOSPITAL-X|DYYMA-AI|XRAY-DEPT|20260513134153||ORM^O01|ACC-20260513-504|P|2.3|||\nPID|1||MRN-120866||Yusuf Al-Rashid||19850101|M|||123 Main St^^Riyadh^KSA|||||||\nORC|NW|ORD-20260513134153-185|||||1^once||20260513134153|Dr. Al-Qahtani||||||\nOBR|1|ORD-20260513134153-185||Abdomen^X-Ray|||20260513134153|||||||Follow-up on cyst||||||||||P|"
+}
