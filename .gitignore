@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+instance/
+.pytest_cache/
+v_env/
+venv/
+.venv/
+static/uploads/
+
+# Mock RIS generated files
+mock_ris/incoming/*.json
+mock_ris/processed/
