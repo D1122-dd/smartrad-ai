@@ -73,15 +73,15 @@ function updateStatCards(rooms, queue) {
     const waitingCases = queue.filter(p => p.status === 'WAITING');
     const waiting = waitingCases.length;
     const critical = waitingCases.filter(p => p.is_urgent == 1 || p.urgency_score >= 8).length;
-    
+
     const scanning = rooms.filter(r => r.status === 'SCANNING').length;
     const avgWait = queue.length
         ? Math.round(queue.reduce((s, p) => s + (p.wait_minutes || 0), 0) / queue.length)
         : 0;
     const sysLoad = Math.round((scanning / 4) * 100);
 
-    setText('stat-waiting', waiting);
-    
+    setText('stat-waiting', queue.length);
+
     const elCrit = document.getElementById('stat-critical');
     const elCritN = document.getElementById('stat-critical-count');
     if (elCrit && elCritN) {
@@ -140,7 +140,7 @@ function renderRoomCards(rooms) {
                               <i class="fas fa-check-double"></i> ${t('dashboard.btn_ready')}
                           </button>`;
         }
-        
+
         if (room.status !== 'IDLE') {
             actionHtml += `<button class="room-action-btn btn-force" onclick="forceFree(${room.id})" 
                                    style="margin-top:4px; font-size:0.7rem; background:#475569; opacity:0.8;">
@@ -252,7 +252,7 @@ async function fetchNotifications() {
         (data.notifications || []).forEach(n => {
             if (!_lastNotifIds.has(n.id)) {
                 _lastNotifIds.add(n.id);
-                
+
                 // Show standard toast
                 showToast(
                     `📋 New Order: ${n.patient} — ${n.exam} (${n.modality})`,
@@ -357,9 +357,9 @@ async function initDashboard() {
     fetchNotifications();
 
     // Polling intervals
-    _roomsTimer = setInterval(fetchRooms,          ROOMS_INTERVAL);
-    _queueTimer = setInterval(fetchQueue,          QUEUE_INTERVAL);
-    _notifTimer = setInterval(fetchNotifications,  NOTIF_INTERVAL);
+    _roomsTimer = setInterval(fetchRooms, ROOMS_INTERVAL);
+    _queueTimer = setInterval(fetchQueue, QUEUE_INTERVAL);
+    _notifTimer = setInterval(fetchNotifications, NOTIF_INTERVAL);
 }
 
 async function forceFree(roomId) {
