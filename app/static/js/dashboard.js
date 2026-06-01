@@ -80,7 +80,7 @@ function updateStatCards(rooms, queue) {
         : 0;
     const sysLoad = Math.round((scanning / 4) * 100);
 
-    setText('stat-waiting', queue.length);
+    setText('stat-waiting', waiting);
 
     const elCrit = document.getElementById('stat-critical');
     const elCritN = document.getElementById('stat-critical-count');
