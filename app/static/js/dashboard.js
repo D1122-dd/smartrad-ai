@@ -249,17 +249,23 @@ async function fetchNotifications() {
         const data = await res.json();
         if (!data.success) return;
 
+        // Count new notifications
+        let newCount = 0;
         (data.notifications || []).forEach(n => {
             if (!_lastNotifIds.has(n.id)) {
                 _lastNotifIds.add(n.id);
-
-                // Show standard toast
-                showToast(
-                    `📋 New Order: ${n.patient} — ${n.exam} (${n.modality})`,
-                    n.urgent ? 'urgent' : 'info'
-                );
+                newCount++;
             }
         });
+
+        // Show single consolidated toast only if there are new orders
+        if (newCount > 0) {
+            showToast(
+                `Fetched ${newCount} Order${newCount !== 1 ? 's' : ''} from RIS`,
+                'info',
+                4000
+            );
+        }
 
         // Update notification dot
         const dot = document.getElementById('notif-dot');
@@ -316,7 +322,7 @@ async function triggerDispatch() {
 
 // ── Toast System ───────────────────────────────────────────────────────────────
 
-function showToast(message, type = 'info') {
+function showToast(message, type = 'info', timeout = 5000) {
     const container = document.getElementById('toast-container');
     if (!container) return;
 
@@ -328,11 +334,11 @@ function showToast(message, type = 'info') {
     // Animate in
     requestAnimationFrame(() => toast.classList.add('toast-visible'));
 
-    // Auto-dismiss after 5s
+    // Auto-dismiss after specified timeout
     setTimeout(() => {
         toast.classList.remove('toast-visible');
         setTimeout(() => toast.remove(), 400);
-    }, 5000);
+    }, timeout);
 }
 
 // ── Utilities ──────────────────────────────────────────────────────────────────

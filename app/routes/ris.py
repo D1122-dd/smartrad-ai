@@ -155,7 +155,7 @@ def generate(user_id):
         
         return jsonify({
             'success': True,
-            'message': f'Generated {count} orders and successfully auto-assigned {len(assignments)} rooms.',
+            'message': f'Fetched {count} orders and successfully auto-assigned {len(assignments)} rooms.',
             'files_count': count,
             'assignments_made': len(assignments)
         }), 200
